@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Poppins', sans-serif;*/
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color:var(--bg-color) #1d2631;
+    --tex-color: #fff;
+    --main-color: #5d888c;
+    --other-color: #fcfcfc;
+    --h1-font: 3rem;
+    --p-font: 0.8rem;
+}
+
+
+body{
+    background-color:#f4f4f4 ;
+    color: #333333;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background-color:  #f4f4f4;
+    color: #333333;
+}
+
+/* Estilos CSS para a caixa de mensagem de erro */
+.mensagem-erro {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FF5733;
+    color: #333333;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    margin-top: 100px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo i{
+    color: var(--main-color);
+    font-size: 32px;
+    margin-right: 5px;
+}
+
+.navegação{
+    display: flex;
+    font-size: 2rem;
+    color: #fafafa;
+}
+
+.navegação a{
+    color: #dddddd;
+    font-size: var(--p-font);
+    font-weight: 3rem;
+    margin: 0 30px;
+    transition: a .55s ease;
+}
+
+.navegação a:hover{
+    color: var(--main-color);
+
+}
+
+
+@media (max-width: 768px) {
+    .navegação {
+        font-size: 1rem;
+        flex-direction: column; /* Muda para empilhar verticalmente */
+        text-align: center; /* Centraliza os itens verticalmente */
+    }
+    .navegação a {
+        margin: 10px 0; /* Adicione espaço entre os links */
+    }
+}
+
+#login-link {
+    font-size: 1.2rem;
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+}
+
+.sectionSegundaria{
+    margin-top: 20px;
+}
+
+
+@media (max-width: 1070px) {
+    .total {
+        font-size: 0.50rem;
+        top: 40px;
+    }
+    .sectionSegundaria {
+        margin-top: 20px;
+        font-size: 0.85rem;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .sectionSegundaria {
+        margin-top: 20px;
+    }
+    
+}
+
+.conteudo{
+    margin-top: 60px;
+    margin-right: 30px;
+    margin-left: 30px; 
+    color: black;
+    text-align: center;
+}
+
+.conteudo a{
+    color: black;
+}
+.botoes-carrinho {
+    display: flex;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Centraliza os elementos verticalmente */
+}
+
+.botao-carrinho {
+    margin-right: 10px; /* Adicione margem direita aos botões */
+}
+
+.produtos_carrinho hr{
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: right;
+    border: white;
+    padding: 0;
+}
+
+/* Adicione estilos para a classe .produto */
+.produto {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+/* Estilos para a classe .total */
+.total {
+    position: absolute;
+    top: 60px; /* Defina a distância desejada do topo */
+    right: 20px; /* Defina a distância desejada da direita */
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+
+/* Estilos para os botões */
+.botao-carrinho {
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+}
+
+/* Estilos para os botões quando o mouse passar por cima */
+.botao-carrinho:hover {
+    background-color: #5a7f83; /* Altere a cor desejada */
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2); /* Adicione uma sombra suave */
+}
+
+/* Estilos para links no menu */
+#logout, #home, #suas-compras {
+    color: #ddd; /* Cor inicial dos links */
+    transition: color 0.3s; /* Adicione uma transição suave na cor do texto */
+    text-decoration: none;
+}
+
+/* Estilos para links no menu quando o mouse passa por cima */
+#logout:hover, #home:hover, #suas-compras:hover {
+    color: var(--main-color); /* Altere a cor desejada ao passar o mouse */
+}
+
+/*estilos do modal pagamento*/
+/* CSS para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.close {
+    color: #888;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+h2 {
+    text-align: center;
+}
+
+#qrCode {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.botao-carrinho:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para a linha de botões */
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaço entre os botões */
+}
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+:root{
+    --dourado:#ffbf00;
+    --azul:#00b5fa;
+    --prata: #97afb7;
+    --black: #000000;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*elementos base*/
+body{
+   background: var(--azul);
+   font-family: 'Arial', Times, serif;
+   color:white;
+}
+
+/* Estilos para o título */
+h1 {
+    text-align: center;
+}
+
+header .container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header .logo{
+    margin-left: 5px;
+    font-family: 'Arial Black', Times;
+    font-size:40px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    background-image: linear-gradient(to right, var(--black), var(--black));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 3px 0 0 var(--dourado);
+}
+
+header nav a{
+    text-decoration:none;
+    color:rgb(255, 255, 255);
+    margin-right: 10px;
+}
+
+
+header nav a:hover{
+    color:rgb(41, 6, 243);
+}
+
+.botao{
+    background-color: rgba(0,0,0,.70);
+    border:none;
+    color: white;
+
+    padding:15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer; /*faz o botão mudar de cor ao passar o mouse*/
+    transition: .3s ease all; /*cuida da transação ao passar o mouse*/
+}
+
+.botao:hover{
+    background-color:white;
+    color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

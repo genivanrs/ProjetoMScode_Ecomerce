@@ -1,0 +1,187 @@
+/*Estilo do cadastro*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Poppins', sans-serif;*/
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color:var(--bg-color) #f4f4f4;;
+    --tex-color: #fff;
+    --main-color: #34e7f8;
+    --other-color: #fcfcfc;
+    --h1-font: 3rem;
+    --p-font: 0.8rem;
+}
+
+
+body{
+    background-color: #f4f4f4;;
+}
+
+/* Estilos CSS para a caixa de mensagem de erro */
+.mensagem-erro {
+    position: absolute;
+    top: 40px;
+    left: 60px; /* Altere o valor de 'left' para mover a mensagem para a direita */
+    background-color: #FF5733;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    align-items: center; /* Esta propriedade não é necessária para o elemento atual */
+    z-index: 20;
+    margin-top: 45px; /* Esta propriedade também não é necessária para o elemento atual */
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background-color:  #f4f4f4;
+}
+
+
+/* Estilos para o formulário */
+form {
+    text-align: center;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f4f4f4;;
+    color: #ffffff;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: #ff6600;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo i{
+    color: var(--main-color);
+    font-size: 32px;
+    margin-right: 5px;
+}
+
+.navegação{
+    display: flex;
+    font-size: 2rem;
+}
+
+.navegação a{
+    color: #ff6600;
+    font-size: var(--p-font);
+    font-weight: 3rem;
+    margin: 0 30px;
+    transition: a .55s ease;
+}
+
+.navegação a:hover{
+    color: var(--main-color);
+
+}
+#login-link {
+    font-size: 1.2rem;
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para o formulário */
+form {
+    text-align: center;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;    
+    color: #333333;
+    margin-top: 30px; /* Adicione margem superior para afastar o formulário do header */
+}
+
+.input-padrao {
+    width: 100%; /* Define a largura desejada para todos os inputs */
+    padding: 10px; /* Adiciona preenchimento para melhorar o visual */
+    margin-bottom: 10px; /* Adiciona margem inferior para espaçamento entre os inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #8796a7;
+    color: #fff;      
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+   
+}
+
+.input-group label {
+    width: 250px; /* Largura fixa para os rótulos */
+    
+}
+
+/*css para ajustar o input genero*/
+.label-input {
+    width: 250px; /* Largura fixa para os rótulos, igual aos outros inputs */
+    margin-bottom: 10px; /* Adicione a margem inferior para espaçamento entre os campos */
+}
+
+.genero-select {
+    width: 100%; /* Isso faz com que o campo "Gênero" ocupe a largura total disponível */
+    padding: 10px; /* Adicione preenchimento para melhorar o visual */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #8796a7;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Isso faz com que o contêiner ocupe a altura total da janela */
+}
+
+.form-center {
+    text-align: center; /* Isso centraliza o conteúdo horizontalmente */    
+}
+
+/*estilo para alinhar o formulario a dir e a esq*/
+.form-left {
+    width: 50%;
+    float: left; /* Isso faz com que a seção fique à esquerda */
+    box-sizing: border-box; /* Isso evita que a margem à direita cause quebra de linha */
+    padding: 20px; /* Adicione preenchimento para espaçamento interno */
+}
+
+.form-right {
+    width: 50%;
+    float: left; /* Isso faz com que a seção fique à direita */
+    box-sizing: border-box; /* Isso evita que a margem à esquerda cause quebra de linha */
+    padding: 20px; /* Adicione preenchimento para espaçamento interno */
+}
+
+
+
+
+
+
+
+
+
+
+

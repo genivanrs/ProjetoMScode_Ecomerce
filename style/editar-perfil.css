@@ -1,0 +1,176 @@
+/*Estilo do cadastro*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Poppins', sans-serif;*/
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color:var(--bg-color) #1d2631;
+    --tex-color: #fff;
+    --main-color: #34e7f8;
+    --other-color: #fcfcfc;
+    --h1-font: 3rem;
+    --p-font: 0.8rem;
+}
+
+
+body{
+    background-color:#f4f4f4 ;
+    color: #333333;    
+}
+
+h1{
+    color: #ffffff;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background-color:  #1d2631;
+}
+
+/* Estilos CSS para a caixa de mensagem de erro */
+.mensagem-erro {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FF5733;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    margin-top: 100px;
+}
+
+/* Estilos para o formulário */
+form {
+    text-align: center;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #1d2631;
+    color: #ffffff;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--tex-color);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo i{
+    color: var(--main-color);
+    font-size: 32px;
+    margin-right: 5px;
+}
+
+.navegação{
+    display: flex;
+    font-size: 2rem;
+    color: white;
+}
+
+.navegação a{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    font-weight: 3rem;
+    margin: 0 30px;
+    transition: a .55s ease;
+}
+
+.navegação a:hover{
+    color: var(--main-color);
+
+}
+
+
+@media (max-width: 768px) {
+    .navegação {
+        font-size: 1rem;
+        flex-direction: column; /* Muda para empilhar verticalmente */
+        text-align: center; /* Centraliza os itens verticalmente */
+    }
+    .navegação a {
+        margin: 10px 0; /* Adicione espaço entre os links */
+    }
+}
+
+
+#login-link {
+    font-size: 1.2rem;
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para o formulário */
+form {
+    text-align: center;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #1d2631;
+    color: #ffffff;
+    margin-top: 30px; /* Adicione margem superior para afastar o formulário do header */
+}
+
+.input-padrao {
+    width: 100%; /* Define a largura desejada para todos os inputs */
+    padding: 10px; /* Adiciona preenchimento para melhorar o visual */
+    margin-bottom: 10px; /* Adiciona margem inferior para espaçamento entre os inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #232e3a;
+    color: #fff;      
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    width: 250px; /* Largura fixa para os rótulos */
+    
+}
+
+.input-group input {
+    width: 100%; /* Define a largura desejada para os inputs */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Isso faz com que o contêiner ocupe a altura total da janela */
+}
+
+.form-center {
+    text-align: center; /* Isso centraliza o conteúdo horizontalmente */    
+}
+
+.button a{
+    color: black;
+}
+
+.nome-cliente-li {
+    margin-right: 10px; /* Ajuste o valor da margem conforme necessário */
+}

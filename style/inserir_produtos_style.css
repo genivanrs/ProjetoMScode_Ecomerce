@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Poppins', sans-serif;*/
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color:#1d2631 ;
+    color: white  
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+.container{
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#voltar_home{
+    background-color: white;
+}

@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Poppins', sans-serif;*/
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* Estilos CSS para a caixa de mensagem de erro */
+.mensagem-erro {
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    background-color: #FF5733;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    align-items: center;
+    z-index: 20;
+}
+
+/* Estilos para o formulário */
+form {
+    text-align: center;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f4f4f4;;
+    color: #333333;
+}
+
+.login-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 244, 244, 0.772);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: white; /* Define a cor do texto como branca */
+    transition: color 0.3s; /* Adiciona uma transição de cor suave */
+}
+
+.login-form a {
+    color: #333333;;
+}
+
+.login-form p a:hover {
+    color: rgb(97, 187, 216); 
+}
+
+
+:root{
+    --bg-color:var(--bg-color) #1d2631;
+    --tex-color: #fff;
+    --main-color: #34e7f8;
+    --other-color: #fcfcfc;
+    --h1-font: 3rem;
+    --p-font: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --h1-font: 2rem;
+        --p-font: 0.9rem;
+    }
+    .one {
+        max-width: 50%;
+        max-height: 50%;
+        width: auto; /* Mantém a proporção da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+body{
+    background-color:#f4f4f4 ;
+    color: #333333;    
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background-color:  #f4f4f4;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: #ff6600;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.nome-cliente-li {
+    margin-right: 10px; /* Ajuste o valor da margem conforme necessário */
+}
+
+
+.navegação{
+    display: flex;
+    font-size: 2rem; 
+     
+}
+
+.navegação .nomeCliente{
+    font-size: 1rem;
+}
+.navegação a{
+    color: #ff6600;
+    font-size: var(--p-font);
+    font-weight: 2.5rem;
+    margin: 0 30px;
+    transition: a .55s ease;
+}
+
+.navegação a:hover{
+    color: var(--main-color);
+
+}
+
+@media (max-width: 768px) {
+    .navegação {
+        font-size: 1rem;
+        flex-direction: column; /* Muda para empilhar verticalmente */
+        text-align: center; /* Centraliza os itens verticalmente */
+    }
+    .navegação a {
+        margin: 10px 0; /* Adicione espaço entre os links */
+    }    
+    .header-icons {
+        width: 35px;
+    }
+    .section .home{
+        margin-top: 200px;
+    }
+   
+}
+
+#login-link {
+    font-size: 1.2rem;
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+}
+
+
+.header-icons i{
+    margin-right: 25px;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.header-icons i:hover{
+    transform: translateY(-5px);
+    color: var(--main-color);
+}
+
+
+.section{
+    background-color:  #2b3644;
+    padding: 0 15%;
+}
+
+.section.home{
+    margin-right: 0;
+}
+.home{
+    position: relative;
+    height: 110vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+}
+
+.home-img {
+    max-width: 100%;
+    text-align: center; /* Centraliza a imagem horizontalmente */
+    margin-left: 20px;
+}
+
+.one {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; /* Mantém a proporção da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.home-text h1{
+    font-size: var(--h1-font);
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.home-text h5{
+    color: #ff6600;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+
+.home-img img{
+    max-width: 100%;
+    width: 28rem;
+    height: auto;
+    margin-left: 25%;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 15px 70px;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent;
+    border: solid 2px var(--tex-color);
+    transition: all.55 ease;
+    color: #fff;
+}
+
+.btn:hover{
+    background: var(--tex-color);
+    border: 2px solid var(--tex-color);
+    color: #000;
+}
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main li img{
+    width: 50px;
+    height: auto;
+    max-width: 100%;
+}
+
+.row{
+    background: var(--main-color);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all.55s ease;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.row:hover {
+    transform: translateY(-8px);
+
+}
+
+.row2{
+    background: #ff758d;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all.55s ease;
+    cursor: pointer;
+}
+
+.row2:hover{
+    transform: translateY(-8px);
+}
+
+.row3{
+    background: #ffd06d;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all.55s ease;
+    cursor: pointer;
+
+}
+
+.row3:hover{
+    transform: translateY(-8px);
+}
+
+
+
+/* Estilos CSS para .mainSegundaria */
+#titulo2{
+    text-align: center;    
+    color: #ff6600;
+}
+
+.mainSegundaria {
+    display: flex;
+    flex-direction: row; /* Configura o layout flexível para uma única linha horizontal */
+    justify-content: center; /* Centraliza os elementos na horizontal */
+    align-items: center; /* Centraliza os elementos na vertical */
+    gap: 20px; /* Adicione um espaçamento entre os elementos */
+}
+
+/* Estilos para as imagens dentro das novas classes .rowSegundaria, .rowSegundaria2, etc. */
+.rowSegundaria li img,
+.rowSegundaria2 li img,
+.rowSegundaria3 li img,
+.rowSegundaria4 li img,
+.rowSegundaria5 li img,
+.rowSegundaria6 li img {
+    max-width: 100%; /* Garante que as imagens se redimensionem proporcionalmente */
+    width: 200px; /* Define a largura desejada */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
