@@ -1,0 +1,67 @@
+/* Estilos para o menu lateral */
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    /*largura menu lateral*/
+    width: 250px;
+    /*Altura menu lateral*/
+    height: 100%;
+    background-color: #73c4d6;
+    color: #fff;
+    padding: 20px;
+    margin-right: 20px;    
+    transition: transform 0.3s ease-in-out; /* Adicione uma transição para um efeito suave de deslize */
+    overflow: hidden; /* Evita rolagem quando o menu está recolhido */
+}
+
+
+
+.menu h2 {
+    margin-top: 0;    
+}
+
+/* Responsividade menu*/
+@media screen and (max-width: 720px) {
+    .menu {
+        width: 30%; /* Oculta o menu definindo a largura para 0 */        
+        font-size: 0.85rem;
+    }
+    .sectionSegundaria button{
+        font-size: 0.65rem;  
+            
+    }   
+    .sectionSegundaria .botoes-carrinho {
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .produtos_carrinho{
+        display: flex;
+        justify-content: flex-end;
+        font-size: 0.9rem;
+    }
+    .total{
+        font-size: 0.55rem;
+    }
+    #NomeEmpresa{
+        font-size: 0.2rem;
+    }
+    
+}
+
+#menuLinks {
+    font-size: 1.1rem;    
+}
+
+#menuLinks a {
+    color: white;
+}
+
+#ClienteNome{
+    font-size: 2rem;
+}
+
+#NomeEmpresa{
+    font-size: 1rem;
+}

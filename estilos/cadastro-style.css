@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos para o formulário */
+form {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;   
+}
+
+/* Estilos para o título */
+h1 {
+    text-align: center;
+}
+
+/* Estilos CSS para a caixa de mensagem de erro */
+.mensagem-erro {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FF5733;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+}

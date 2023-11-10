@@ -1,0 +1,118 @@
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Espaçamento entre os produtos */
+}
+
+.produtos .produto {   
+    min-width: 200px;
+    max-width: 270px; /*Largura*/    
+    text-align: center;
+    padding: 6px; /*Altera a borda do quadro dos produtos*/
+    box-sizing: border-box; /* Evita que a borda afete a largura do contêiner */    
+}
+
+@media (max-width: 768px) {
+    .produtos .produto {
+        flex: 0 0 calc(25% - 20px);
+        font-size: 0.85rem;
+        min-width: 280px;
+        max-width: 200px;
+    }
+      
+}
+
+
+.produtos .produto .adicionar_ao_carrinho{
+    
+    color: #ff6600;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    position: absolute; /* Torna o elemento filho para o posicionamento absoluto */
+    bottom: 10px; /* Ajuste essa distância conforme necessário */
+    /*left: 10px; /* Distância da borda esquerda */
+    border-top-left-radius: 15px; /* Arredonde o canto superior esquerdo */
+    border-bottom-left-radius: 5px; /* Arredonde o canto inferior direito */
+    right: 0px;
+}
+
+
+
+.produtos .produto img {
+    width: auto; /* Defina um tamanho máximo para a largura da imagem */
+    height: 90px; /* Defina um tamanho máximo para a altura da imagem (ajuste conforme necessário) */
+}
+
+/* Estilos para o quadro colorido dos detalhes do produto */
+.produtos .produto-detalhes {
+    background-color: #e7e5e5; /* Cor de fundo */
+    padding: 10px;
+    margin-top: 2px; /* Espaçamento entre a imagem e o quadro colorido */
+    height: 200px; /* Defina a altura desejada do quadro dos produtos*/
+    overflow: hidden; /* Adicione uma rolagem vertical se o conteúdo exceder a altura */
+    position: relative; /* Torna o elemento pai para o posicionamento */
+    font-size: 0.80rem;
+}
+
+.produtos .produto h2,
+.produtos .produto p {
+    margin: 0; /* Remova as margens padrão para evitar espaçamento indesejado */
+}
+
+.produtos .produto h2 {
+    margin-bottom: 10px; /* Adicione a margem inferior desejada */
+}
+
+/*espaço entre o carrinho e o numero*/
+.tooltip{
+    margin-right: 1px;
+}
+
+.num-carrinho {
+    margin-left: -25px;
+}
+
+/*carrousel*/
+/* Estilize a div que envolve o carrossel e os botões */
+.produto-carousel-container {
+    position: relative;
+    overflow: hidden; /* Garante que os botões "Previous" e "Next" não ultrapassem a área visível */
+}
+
+/* Estilo para o carrossel */
+.produto-carousel {
+    display: flex; /* Exibe os itens em uma única linha horizontal */
+    overflow: hidden; /* Garante que os itens não ultrapassem a área visível */
+    transition: transform 0.3s; /* Adiciona uma animação de transição suave */
+}
+
+/* Ajuste o tamanho das imagens dentro do carrossel */
+.produto-carousel img {
+    max-width: 150px; /* Largura máxima desejada */
+    max-height: 150px; /* Altura máxima desejada */    
+}
+
+/* Estilo para os botões "Previous" e "Next" */
+.slick-prev, .slick-next {
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+    background: transparent;
+    border: none;
+    font-size: 0.90rem;
+    cursor: pointer;
+}
+
+/* Estilo para o botão "Previous" */
+.slick-prev {
+    left: 10px;
+}
+
+/* Estilo para o botão "Next" */
+.slick-next {
+    right: 10px;
+}
+
+
