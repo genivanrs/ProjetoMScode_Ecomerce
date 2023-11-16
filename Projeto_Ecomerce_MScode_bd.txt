@@ -1,0 +1,107 @@
+senha:102030@ABCabc
+usuario: id21381713_root
+
+nome do banco id21381713_ecomerce
+
+Para alterar a senha do server
+
+SET PASSWORD FOR 'nome_do_usuario'@'localhost' 
+= PASSWORD('nova_senha');
+
+
+ALTER USER 'root'@'%' 
+IDENTIFIED BY '102030@ABCabc';
+
+Para add um user:
+
+CREATE USER 'id21381713_root'@'localhost' IDENTIFIED BY '102030@ABCabc';
+GRANT ALL PRIVILEGES ON *.* TO 'novo_usuario'@'localhost' WITH GRANT OPTION;
+
+
+
+CREATE DATABASE ecomerce;
+
+USE ecomerce;
+
+dados do login e cadastro:
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    sobrenome VARCHAR(255) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    cpf VARCHAR(11) NOT NULL,
+    contato VARCHAR(255) NOT NULL,
+    genero ENUM('masculino', 'feminino', 'outro') NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL
+);
+
+__________________________________________
+Dados da tabela do carrinho,
+guarda ate finalizar a compra
+
+CREATE TABLE compras (
+    id_produto INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    data_compra TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+
+________________
+
+Dados do processar_compra.php
+Criação da tabela de produtos
+onde e salvo os produtos, preço....etc
+
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    preco DECIMAL(10, 2) NOT NULL,
+    quantidade INT NOT NULL
+);
+
+comando para add os produtos:
+INSERT INTO produtos (nome, descricao, preco, quantidade) VALUES
+('Produto 1', 'Descrição do Produto 1', 19.99, 50),
+
+___________________________
+Dados do cliente.php
+onde e salvo o carinho / lista de pedidos
+e onde fica salvo as compras efetuadas
+
+
+CREATE TABLE pedidos (
+    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_id INT NOT NULL, -- ID do cliente associado ao pedido
+    id_produto INT NOT NULL, -- ID do produto associado ao pedido
+    quantidade INT NOT NULL, -- Quantidade do produto no pedido
+    total DECIMAL(10, 2) NOT NULL, -- Total do pedido
+    descricao TEXT NOT NULL, -- Descrição do pedido
+    data_compra TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Data e hora da compra
+    -- Adicione outros campos relevantes para o pedido, se necessário
+    FOREIGN KEY (cliente_id) REFERENCES usuarios(id), -- Chave estrangeira referenciando a tabela de usuários
+    FOREIGN KEY (id_produto) REFERENCES produtos(id) -- Chave estrangeira referenciando a tabela de produtos
+);
+
+
+
+
+
+a verificar:
+
+_______________________
+Tabela do carinho
+
+CREATE TABLE carrinhos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_id INT NOT NULL,
+    carrinho JSON NOT NULL
+);
+
+
+
+
